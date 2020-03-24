@@ -1,0 +1,96 @@
+<div class="page" data-name="register" >
+   
+    <!-- Top Navbar -->
+  <div class="navbar no-shadow">
+    <div class="navbar-inner">
+    <div class="left">
+        <a href="#" class="link icon-only panel-open">
+         <i class="icon f7-icons ios-only">menu</i>
+          <i class="material-icons panel-icons">menu</i>
+        </a>
+      </div>
+	  <div class="title sliding blue">Registration</div>
+    <div class="right">
+	<a href="/dashboard/" class="link icon-only">
+             <i class="f7-icons ios-only">home</i>
+			 <i class="material-icons md-only">home</i>
+</a> 
+               </div> 
+    </div>
+  </div>
+
+    <div class="page-content" style="background-image: url(assets/img/blue.jpg)">
+       
+        <center>
+            <p class="page-header">Registration Status</p>
+        </center>
+        <br>
+        
+        <div class="list">
+            <ul>
+            <li>
+              <div class="item-content">
+                
+                <div class="item-inner">
+                  <div class="item-title">Status</div>
+                  <div class="item-after" id="result"></div>
+                </div>
+              </div>
+            </li>
+            </ul>
+        </div>
+        
+        <div class="card data-table">
+    <div id="data"></div>
+    <script id="template" type="text/template7">
+  <table>
+    <thead>
+      <tr>
+        <th class="label-cell">Code</th>
+        <th class="numeric-cell">Name</th>
+		
+       </tr>
+    </thead>
+    <tbody>
+        
+        {{#each this}}
+         <tr>
+        <td class="label-cell" >{{code}} </td>
+        <td class="numeric-cell" >{{name}} </td>
+		
+        </tr>
+       {{/each}}
+     </tbody>
+ </table>
+</script>
+ </div>
+        
+        <div>
+	      <div class="block">
+          <a href="#" id="register" class="col button button-raised button-fill button-round open-toast-icon register" >Register</a>
+          </div>
+
+			
+          <!--  <a href="/waitingapproval/" style="width:60%" class="button button-round button-fill open-toast-center" >Register Courses</a> -->
+            
+
+        </div>
+     </div>
+        
+    
+   
+    <div class="popover popover-links">
+    <div class="popover-inner">
+      <div class="list">
+        <ul>
+          <li><a href="/index/" class="list-button popover-close" >Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+

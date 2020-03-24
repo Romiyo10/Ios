@@ -1,0 +1,24 @@
+{
+  "name": "com.phonegap.helloworld",
+  "version": "1.0.0",
+  "displayName": "trialApp",
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-camera": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
+    "cordova-plugin-network-information": "^2.0.1",
+    "cordova-plugin-whitelist": "1.3.3"
+  },
+  "devDependencies": {
+    "cordova-plugin-camera": "~4.0.3"
+  }
+}

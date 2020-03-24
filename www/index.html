@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">  
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <title>Student App
+  
+  </title>
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="framework7/css/framework7.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!--  FONTS-->
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+    <script src="localforage/localforage.js"></script> 
+    <script>            
+        localforage.config({driver: localforage.WEBSQL,
+            // Force WebSQL; same as using setDriver()
+            name: "apos",                
+            version: 1.0,                
+            size: 4980736, // Size of database, in bytes. WebSQL-only for now.
+            storeName: "studentdata", // Should be alphanumeric, with underscores. 
+            description: "local_storage"
+           });
+        
+    </script>
+    
+    <script src="template7/template7.min.js"></script>
+  
+</head>
+
+<body>
+ 
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect when hidden -->
+    <!-- Left panel with reveal effect when hidden -->
+      <div class="panel panel-left panel-reveal">
+      <div class="view view-left">
+       <div class="page">
+       <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Student App</div> 
+	        </div>
+       </div>
+        
+        <div class="page-content">
+            
+        <div class="list">
+          <ul>
+            <li>
+                <a href="/dashboard/" class="panel-close my-panel">
+                <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">home</i>
+                        </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Home</span>
+                        </div>
+                        </div>
+                </div>
+                </a>
+            </li>
+            <!--<li>
+                <a href="/profile/" class="panel-close">
+                <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">person_outline</i>
+                        </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Profile</span>
+                        </div>
+                        </div>
+                </div>
+                </a>
+            </li>-->
+            <li>
+                <a href="/registercourse/" class="panel-close">
+                <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">book</i>
+                        </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Registration</span>
+                        </div>
+                        </div>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="/finance/" class="panel-close">
+                <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">payment</i>
+                        </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Finances</span>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+            </li>
+            <!--<li>
+                <a href="/notifications/" class="panel-close">
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">notifications_none</i>
+                        </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Notification</span>
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            </li>-->
+            <li>
+                <a href="/ExamResults/" class="panel-close my-panel">
+                       <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">school</i>
+                            </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Exams</span>
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/index/" class="panel-close my-panel">
+                <div class="item-content">
+                        <div class="item-media">
+                            <i class="material-icons panel-icons">close</i>
+                            </div>
+                        <div class="item-inner">
+                        <div class="item-title">
+                            <span class="panel-label">Sign Out</span>
+                          </div>
+                        </div>
+                    </div>  
+                </a>
+            </li>
+          </ul>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main ">
+             
+             <!--FOOTER Tool bar-->
+              <div class= "footer toolbar toolbar-bottom-md bg-color-white no-shadow">Powered by Zynle Learning &reg;</div>
+             <!--End FOOTER Toolbar-->
+              
+              
+        <div class="page">
+        <!-- page-content has additional login-screen content -->
+        <div class="page-content login-screen-content" style="background-image: url(assets/img/blue.jpg)">
+         
+          <div class="login-screen-title"><img src="assets/img/zao.png" alt="Smiley face" width="40%" height="30%">
+          <br/>
+          </div>
+            <!-- Log in form-->
+          <form name = "login" id="login-form">
+          
+          <div class="list">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label"></div>
+                  <div class="item-input-wrap" >
+                    <input style="border-radius: 25px;" type="text" name="username" placeholder="Your username">
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label"></div>
+                  <div class="item-input-wrap">
+                    <input style="border-radius: 25px;" type="password" name="password" placeholder="Your password">
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+         
+          <!--BUTTONS-->
+          <div class="block">
+
+            <div class="row">
+              <a href="#" class="link col"></a>
+              <a href="#" type="submit" class="student-login col button button-raised button-fill button-round ">Sign In</a>
+              <a href="#" class="link col"></a>
+            </div>
+              
+            <br/>
+<!--        
+            <div class="row">
+            </div>
+-->
+
+            <div class="block-footer">
+                <a href="/forgottenPass/" class="link">Forgot password</a>
+				
+            </div>
+
+                      
+          </div>
+              </form>
+        </div>    
+    </div>
+    </div>
+  </div>
+
+
+
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+  
+
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Your custom app scripts -->
+    <script src="js/my-app.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/statement.js"></script>
+    <script src="js/quotation.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/register.js"></script>
+  
+   
+
+</body>
+  
+</html>

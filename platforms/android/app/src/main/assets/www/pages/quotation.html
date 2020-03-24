@@ -1,0 +1,63 @@
+<div class="page" data-name="quotation">
+ 
+  <!-- Top Navbar -->
+<div class="navbar no-shadow">
+    <div class="navbar-inner">
+    <div class="left">
+        <a href="#" class="link icon-only panel-open">
+         <i class="icon f7-icons ios-only">menu</i>
+          <i class="material-icons panel-icons">menu</i>
+        </a>
+      </div>
+	  <div class="title sliding blue">Quotation</div>
+    <div class="right">
+	          <a class="link back">
+             <i class="icon icon-back"></i>
+			 <span class="ios-only">Back</span>
+              </a>
+               </div> 
+    </div>
+</div>
+  
+  <div class="page-content" style="background-image: url(assets/img/blue.jpg)">
+   
+  <center>  <p class="page-header">Quotation</p></center>
+    <br>
+
+
+
+<div class="card data-table">
+    <div id="data"></div>
+    <script id="template" type="text/template7">
+      <table>
+        <thead>
+          <tr>
+            <th class="label-cell">Fee name</th>
+            <th class="numeric-cell">Amount</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+        {{#each quotation}}
+          <tr>
+            <td class="label-cell">{{fee_name}}</td>
+            <td class="numeric-cell">K {{amount}} </td>
+          </tr>
+          {{/each}}
+          
+          <tr>
+            <td class="label-cell" colspan=3>Total: K {{total}}</td>
+          </tr>
+          
+          </tbody>
+          
+      </table>
+    </script>
+        
+</div>
+      
+      <br>
+    <!--<center><a href="#" style = "width:60%" class="button button-round button-fill">Make Payment</a></center>-->
+      <br>
+</div>
+</div>
